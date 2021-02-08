@@ -70,7 +70,7 @@ jobs:
         run: cargo install grcov
 
       - name: Run tests
-        run: make --jobs=3 ci-check
+        run: make -d --jobs=3 ci-check
 
         # gcov tool from gcc doesn't understand profiling info that LLVM
         # produces, so we trick grcov into using llvm-cov instead. We can't
