@@ -13,6 +13,7 @@ jobs:
       CC: clang-11
       CXX: clang++-11
       # Enable test coverage.
+      CXXFLAGS: '-fprofile-instr-generate -fcoverage-mapping'
       PROFILE: 1
       # These flags are necessary for grcov to correctly calculate coverage.
       CARGO_INCREMENTAL: 0
