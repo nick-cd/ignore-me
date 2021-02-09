@@ -24,7 +24,7 @@ jobs:
       # We pretend ours is a simple one.
       TERM: 'dumb'
       # This prevents our tests from hogging too much of the CPU and failing
-      # due to races.
+      # due to races. 
       RUST_TEST_THREADS: 2
 
     steps:
