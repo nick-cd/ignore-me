@@ -45,10 +45,12 @@ jobs:
           echo 'ru_RU.CP1251 CP1251' | sudo tee --append /etc/locale.gen
           sudo locale-gen
 
-      - name: Install Rust
-        uses: ATiltedTree/setup-rust@v1
+      - name: Toolchain setup
+        uses: actions-rs/toolchain@v1
         with:
-          rust-version: nightly
+          toolchain: nightly
+          override: true
+          components: llvm-tools-preview
 
       - uses: actions/checkout@v2
 
