@@ -13,9 +13,8 @@ jobs:
       CC: clang-11
       CXX: clang++-11
       # Enable test coverage.
-      CXXFLAGS: '-fprofile-instr-generate -fcoverage-mapping'
-      PROFILE: 1
-      # These flags are necessary for grcov to correctly calculate coverage.
+      BARE_CXXFLAGS: '-fprofile-instr-generate -fcoverage-mapping'
+      # This flag is necessary for grcov to correctly calculate coverage.
       # We add `-A warnings` because we aren't interested in warnings from Rust
       # Nightly -- GitHub turns them into annotations, which is annoying.
       RUSTFLAGS: '-A warnings -Zinstrument-coverage'
